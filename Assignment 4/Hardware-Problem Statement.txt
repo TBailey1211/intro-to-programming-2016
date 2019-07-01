@@ -1,0 +1,42 @@
+Problem Statement:
+
+Assumptions:
+Customer gets only one discount.
+One customer calculated at a time.
+employee Discount = .10
+contractor Discount = .20
+high Order Discount = .05
+high Order Amount = 800
+high Age Cutoff = 90
+old Customer Discount = 0
+sales Tax = .08
+
+
+Input:
+
+original Price
+age
+contractor? (yes/no)
+employee? (yes/no)
+
+Calculations:
+
+if (contractor = "yes")
+   discount = original Price * contractor Discount
+else
+   discount = original Price * employee Discount
+else if (original Price > high Order Amount)
+   discount = original Price * high Order Discount
+else if (age > 90)
+   tax = 0
+
+subtotal = original Price - discount
+tax = sales Tax * subtotal
+final Price = tax + subtotal
+
+Output:
+original Price
+discount
+subtotal
+tax
+final Price

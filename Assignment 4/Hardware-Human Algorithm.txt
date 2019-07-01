@@ -1,0 +1,35 @@
+Human Algorithm:
+
+employeeDiscount = .10
+contractorDiscount = .20
+highOrderDiscount = .05
+highOrderAmount = 800
+highAgeCutoff = 90
+oldCustomerDiscount = 0
+salesTax = .08
+
+Input: originalPrice
+Input: age
+Input: contractor? (yes/no)
+
+if (contractor = "yes")
+   discount = originalPrice * contractorDiscount
+else 
+Input: employee? (yes/no)
+if (employee = "yes")
+   discount = originalPrice * employeeDiscount
+else if (originalPrice > highOrderAmount)
+   discount = originalPrice * highOrderDiscount
+
+if (age > 90)
+   tax = 0
+
+subtotal = originalPrice - discount
+tax = salesTax * subtotal
+finalPrice = tax + subtotal
+
+Output: originalPrice
+Output: discount
+Output: subtotal
+Output: tax
+Output: finalPrice

@@ -1,0 +1,53 @@
+<script type="text/javascript">
+<!--
+var originalPrice, age, contractor, discount, subtotal, tax, finalPrice, employee;
+//Assignments
+var employeeDiscount = .10;
+var contractorDiscount = .20;
+var highOrderDiscount = .05;
+var highOrderAmount = 800;
+var highAgeCutoff = 90;
+var oldCustomerDiscount = 0;
+var salesTax = .08;
+var discount = 0;
+//Input
+originalPrice = prompt("What is the price of the order?","");
+age = prompt("What is your age?","");
+contractor = prompt("Are you a contractor?","");
+if (contractor == "yes")
+{ //start contractor
+   discount = originalPrice * contractorDiscount;
+} //end contractor
+else
+{ //start not contractor
+employee = prompt("Are you an employee?","");
+if (employee == "yes")
+{ //start employee
+   discount = originalPrice * employeeDiscount;
+} //stop employee
+else if (originalPrice > highOrderAmount)
+{ //start big order
+   discount = originalPrice * highOrderDiscount;
+ } // end big order
+} //end not contractor
+
+if (age > highAgeCutoff)
+{ //start old age
+   salesTax = oldCustomerDiscount;  
+}	//end old age
+
+subtotal = originalPrice - discount;
+tax = salesTax * subtotal;
+finalPrice = tax + subtotal;
+//Convert
+subtotal = subtotal.toFixed(2);
+tax = tax.toFixed(2);
+finalPrice = finalPrice.toFixed(2);
+//Output
+document.write("<br>The original price is $" + originalPrice);
+document.write("<br>The discount is $" + discount);
+document.write("<br>The subtotal is $" + subtotal);
+document.write("<br>The sales tax is $" + tax);
+document.write("<br>The final price is $" + finalPrice);
+// -->
+</script>
