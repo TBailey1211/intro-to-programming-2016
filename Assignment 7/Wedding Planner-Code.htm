@@ -1,0 +1,105 @@
+<script type="text/javascript">
+<!--
+var name, familySide, giftType;
+//Counters
+var groomCount = 0;
+var brideCount = 0;
+var toasterCount = 0;
+var silverCount = 0;
+var stemCount = 0;
+//Accumulators 
+var groomAccum = "";
+var brideAccum = "";
+var toasterAccum = "";
+var silverAccum = "";
+var stemAccum = "";
+var errorFlag = 0;
+//Loop
+var anotherPerson = "yes"
+while(anotherPerson == "yes")
+{ //start loop
+name = prompt("What is your name?","");
+familySide = prompt("What side of the family are you on?", "Groom");
+giftType = prompt("What gift did you bring?","");
+if (familySide == "Groom")
+{
+   groomCount = groomCount + 1;
+	 if (groomCount == 1)
+	 {
+	    groomAccum = "<P>Groom side: <br>" + groomCount + ". " + name + ": " + giftType;
+	 }
+	 else
+	 {
+	    groomAccum = groomAccum + "<br>" + groomCount + ". " + name + ": " + giftType;
+	 }
+}
+else
+{
+   brideCount = brideCount + 1;
+   if (brideCount == 1)
+	 {
+	    brideAccum = "<P>Bride side: <br>" + brideCount + ". " + name + ": " + giftType;
+	 }
+	 else
+	 {
+	    brideAccum = brideAccum + "<br>" + brideCount + ". " + name + ": " + giftType;
+	 }
+} //while stop
+
+switch(giftType)
+{//start switch
+   case "toaster":
+	    toasterCount = toasterCount + 1;
+			   if (toasterCount == 1)
+				 {
+				    toasterAccum = "<P>Multiple toasters by: <br>" + name;
+				 }
+				 else
+				 {
+				    toasterAccum = toasterAccum + "<br>" + name;
+				 }
+	 break;
+						
+   case "silverware":
+	    silverCount = silverCount + 1;
+			   if (silverCount == 1)
+				 {
+				    silverAccum = "<P>Multiple silverware by: <br>" + name;
+				 }
+				 else
+				 {
+				    silverAccum = silverAccum + "<br>" + name;
+				 }
+	 break;				
+	 
+	 case "stemware":
+	    stemCount = stemCount + 1;
+			   if (stemCount == 1)
+				 {
+				    stemAccum = "<P>Multiple silverware by: <br>" + name;
+				 }
+				 else
+				 {
+				    stemAccum = stemAccum + "<br>" + name;
+				 }
+	 break;		
+} //stop switch
+						
+if (errorFlag == 0)
+{
+   anotherPerson = prompt("Is there another person?", "yes");
+}
+else
+{
+   anotherPerson = "yes";
+	 errorFlag = 0;
+}
+
+}//end loop
+document.write(groomAccum);
+document.write(brideAccum);
+document.write(toasterAccum);
+document.write(silverAccum);
+document.write(stemAccum);
+// -->
+</script>

@@ -1,0 +1,26 @@
+Input:
+name
+family Side
+gift Type
+
+toaster, silverware, stemware, other
+
+Calculations(Logic)
+if familySide = "groom"
+   groomCount = groomCount + 1
+   if groomCount = 1
+      groomAccum = "Groom: " + groomCount + ". " + name
+   else
+      groomAccum = groomAccum + "; " + groomCount + ". " + name
+else if familySide = "bride"
+   brideCount = brideCount + 1
+   if brideCount = 1
+      brideAccum = "Bride: " + brideCount + ". " + name
+   else
+      brideAccum = brideAccum + "; " + groomCount + ". " + name
+
+
+Output:
+groomSide
+brideSide
+name(s)
