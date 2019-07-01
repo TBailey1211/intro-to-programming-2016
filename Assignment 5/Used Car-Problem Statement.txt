@@ -1,0 +1,65 @@
+Problem Statement: 
+
+Assumptions:
+Dealership sells only Ford, GM, and Dodge cars. 
+Only cars will be evaluated.
+One car at a time. 
+ford Less Rate = .02
+ford Over Rate = .05
+ford Middle Rate = .03
+GM Less Rate = .05
+GM Over Rate = .10
+GM Middle Rate = .07
+dodge Less Rate = .01
+dodge Over Rate = .03
+dodge Middle Rate = .02
+less Cut Off = 10,000
+over Cut Off = 20,000
+error Flag = 0
+
+
+Input:
+base Price
+vehicle Make
+
+
+Calculations:
+if vehicle Make = "Ford" then
+   if base Price < less Cut Off
+   rate = ford Less Rate
+else
+   if base Price > over Cut Off
+   rate = ford Over Rate
+else
+   rate = ford Middle Rate 
+
+
+if vehicle Make = "GM" then
+   if base Price < less Cut Off
+   rate = GM Less Rate
+else 
+   if base Price > over Cut Off
+   rate = GM Over Rate
+else
+   rate = GM Middle Rate
+
+
+if vehicle Make = "Dodge" then
+   if base Price < less Cut Off
+   rate = dodge Less Rate
+else
+   if base Price > over Cut Off
+   rate = dodge Over Rate
+else
+   rate = dodge Middle Rate 
+
+
+mark Up = rate * base price 
+sale Price = mark Up + base Price
+   
+
+Output:
+
+base Price
+vehicle Make
+sale Price

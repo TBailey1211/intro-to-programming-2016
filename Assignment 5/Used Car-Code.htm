@@ -1,0 +1,90 @@
+<script type="text/javascript">
+<!--
+var basePrice, vehicleMake, salePrice, markUp, rate;
+//Assignments
+var fordLessRate = .02;
+var fordOverRate = .05;
+var fordMiddleRate = .03;
+var GMLessRate = .05;
+var GMOverRate = .10;
+var GMMiddleRate = .07;
+var dodgeLessRate = .01;
+var dodgeOverRate = .03;
+var dodgeMiddleRate = .02;
+var lessCutOff = 10000;
+var overCutOff = 20000;
+var errorFlag = 0;
+//Input
+basePrice = prompt("What is the base price of the car?","");
+vehicleMake = prompt("What is the make of the vehicle?","Ford, GM, Dodge");
+//Conversion
+basePrice = parseFloat(basePrice);
+//Calculations
+switch(vehicleMake)
+{//begin switch
+   case "Ford":
+	 if (basePrice < lessCutOff)
+	 { //if begin
+	    rate = fordLessRate;
+	 } //if end
+	 else if (basePrice > overCutOff)
+	 { //else if begin
+	    rate = fordOverRate;
+	 } //else if end
+	 else 
+	 { //else begin 
+	    rate = fordMiddleRate;
+	 } //else end
+	 break;
+	 
+	 case "GM":
+	 if (basePrice < lessCutOff)
+	 { //if begin
+	    rate = GMLessRate;
+	 } //if end
+	 else if (basePrice > overCutOff)
+	 { //else if begin
+	    rate = GMOverRate;
+	 } //else if end
+	 else 
+	 { //else begin 
+	    rate = GMMiddleRate;
+	 } //else end
+	 break;
+	 
+	 case "Dodge":
+	 if (basePrice < lessCutOff)
+	 { //if begin
+	    rate = dodgeLessRate;
+	 } //if end
+	 else if (basePrice > overCutOff)
+	 { //else if begin
+	    rate = dodgeOverRate;
+	 } //else if end
+	 else 
+	 { //else begin 
+	    rate = dodgeMiddleRate;
+	 } //else end
+	 break;
+	 
+	 default:
+	    alert("Your entry" + vehicleMake + "did not match Ford, GM, or Dodge");
+			errorFlag = 1;
+	 
+}//end switch
+
+if (errorFlag == 0)
+{ //begin if
+   markUp = rate * basePrice;
+	 salePrice = markUp + basePrice;
+	 //Output
+	 document.write("The base price of the vehicle is $" + basePrice);
+	 document.write("<br>The type of vehicle is " + vehicleMake);
+	 document.write("<br>The sale price is $" + salePrice);
+} //end if
+else
+{ //begin else
+   document.write("You typed " + vehicleMake + ". You needed to type: Ford, GM, or Dodge. Please try again.");
+} //end else
+// -->
+</script>

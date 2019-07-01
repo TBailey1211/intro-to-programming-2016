@@ -1,0 +1,53 @@
+Human Algorithm: 
+
+fordLessRate = .02
+fordOverRate = .05
+fordMiddleRate = .03
+GMLessRate = .05
+GMOverRate = .10
+GMMiddleRate = .07
+dodgeLessRate = .01
+dodgeOverRate = .03
+dodgeMiddleRate = .02
+lessCutOff = 10,000
+overCutOff = 20,000
+errorFlag = 0
+
+Input: basePrice
+Input: vehicleMake
+
+if vehicleMake = "Ford" then
+   if basePrice < lessCutOff
+   rate = fordLessRate
+else
+   if basePrice > overCutOff
+   rate = fordOverRate
+else
+   rate = fordMiddleRate 
+
+
+if vehicleMake = "GM"
+   if basePrice < lessCutOff
+   rate = GMLessRate
+else 
+   if basePrice > overCutOff
+   rate = GMOverRate
+else
+   rate = GMMiddleRate
+
+
+if vehicleMake = "Dodge" 
+   if basePrice < lessCutOff
+   rate = dodgeLessRate
+else
+   if basePrice > overCutOff
+   rate = dodgeOverRate
+else
+   rate = dodgeMiddleRate 
+
+markUp = rate * basePrice 
+salePrice = markUp + basePrice
+   
+Output: basePrice
+Output: vehicleMake
+Output: salePrice
