@@ -1,0 +1,23 @@
+<script type="text/javascript">
+<!--
+var smallTruckTon, largeTruckTon, numSTrucks, numLTrucks;
+var price, totalTon, bill;
+//Assignment
+smallTruckTon = 5;
+largeTruckTon = 10;
+//Input
+numSTrucks = prompt ("How many small trucks were loaded?","");
+numLTrucks = prompt ("How many large trucks were loaded?","");
+price = prompt ("What is the negotiated price per ton?","");
+//Calculation
+smallTruckTon = numSTrucks * smallTruckTon;
+largeTruckTon = numLTrucks * largeTruckTon;
+totalTon = smallTruckTon + largeTruckTon;
+bill = totalTon * price;
+//Output
+document.write("The weight of the small truck(s) is " + smallTruckTon);
+document.write("<br>The weight of the large truck(s) is " + largeTruckTon);
+document.write("<br>The total ton(s) is " + totalTon);
+document.write("<br>The total bill is $" + bill);
+// -->
+</script>

@@ -1,0 +1,13 @@
+smallTruckTon = 5
+largeTruckTon = 10 
+Input: numSTrucks
+Input: numLTrucks
+Input: price
+smallTruckTon = numSTrucks * smallTruckTon
+largeTruckTon = numLTrucks * largeTruckTon
+totalTon = smallTruckTon + largeTruckTon
+bill = totalTon * price
+Output: smallTruckTon
+Output: largeTruckTon
+Output: totalTon
+Output: bill

@@ -1,0 +1,23 @@
+Assumptions:
+One run of trucks at a time
+2 types of trucks only
+small Truck Ton = 5 ton
+large Truck Ton = 10 ton
+
+
+Input: 
+num S Trucks
+num L Trucks
+price
+
+Calculations:
+small Truck Ton = num S Trucks * small Truck Ton
+large Truck Ton = num L Trucks * large Truck Ton
+total Ton = small Truck Ton + large Truck Ton
+bill = total Ton * price
+
+Output:
+small Truck Ton
+large Truck Ton
+total Ton
+bill
