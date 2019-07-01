@@ -1,0 +1,36 @@
+Problem Statement: 
+
+Assumptions:
+Number of tickets for same type of ticket and voucher.
+Must pay for ticket and voucher. 
+night Tourn Rate = 20
+day Tourn Rate = 10
+weekday Vouch Rate = 5
+weekend Vouch Rate = 15
+
+
+Input:
+number Of Tickets
+day Tourn (yes / no)
+weekday Vouch (yes / no) 
+
+
+Calculations: 
+if day Tourn = "yes" 
+   price Per Ticket = day Tourn Rate
+else
+   price Per Ticket = night Tourn Rate
+if weekday Vouch = "yes"
+   price Per Vouch = weekday Vouch Rate
+else
+   price Per Vouch = weekend Vouch Rate
+
+price Per Ticket And Vouch = price Per Ticket + price Per Vouch
+total Amount Owed = price Per Ticket + price Per Vouch * number Of Tickets
+
+Output:
+number Of Tickets
+price Per Ticket
+price Per Vouch
+price Per Ticket And Vouch
+total Amount Owed  

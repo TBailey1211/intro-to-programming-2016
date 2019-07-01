@@ -1,0 +1,40 @@
+<script type="text/javascript">
+<!--
+var numberOfTickets, dayTourn, weekdayVouch, pricePerTicket, pricePerVouch
+var pricePerTicketAndVouch, totalAmountOwed;
+//Assignment
+var nightTournRate = 20;
+var dayTournRate = 10;
+var weekdayVouchRate = 5;
+var weekendVouchRate = 15;
+//Input
+numberOfTickets = prompt("How many tickets purchased?","");
+dayTourn = prompt("Are the tickets for a day tournament?","");
+weekdayVouch = prompt("Are the vouchers for a weekday tournament?","");
+if (dayTourn == "yes")
+{
+   pricePerTicket = dayTournRate;
+}
+else
+{
+   pricePerTicket = nightTournRate;
+}
+if (weekdayVouch == "yes")
+{
+   pricePerVouch = weekdayVouchRate;
+}
+else
+{
+   pricePerVouch = weekendVouchRate;
+}
+//Calculations
+pricePerTicketAndVouch = pricePerTicket + pricePerVouch;
+totalAmountOwed = pricePerTicketAndVouch * numberOfTickets;
+//Output
+document.write("The number of tickets is $" + numberOfTickets);
+document.write("<br>The price per ticket is $" + pricePerTicket);
+document.write("<br>The price per voucher is $" + pricePerVouch);
+document.write("<br>The price of both the tickets and vouchers is $" + pricePerTicketAndVouch);
+document.write("<br>The total amount owed is $" + totalAmountOwed);
+// -->
+</script>

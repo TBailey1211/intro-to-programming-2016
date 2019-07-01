@@ -1,0 +1,28 @@
+Human Algorithm:
+
+nightTournRate = 20
+dayTournRate = 10
+weekdayVouchRate = 5
+weekendVouchRate = 15
+
+Input: numberOfTickets
+Input: dayTourn (yes / no)
+Input: weekdayVouch (yes / no) 
+
+if dayTourn = "yes" 
+   pricePerTicket = dayTournRate
+else
+   pricePerTicket = nightTournRate
+if weekdayVouch = "yes"
+   pricePerVouch = weekdayVouchRate
+else
+   pricePerVouch = weekendVouchRate
+
+pricePerTicketAndVouch = pricePerTicket + pricePerVouch
+totalAmountOwed = pricePerTicketAndVouch * numberOfTickets
+
+Output: numberOfTickets
+Output: pricePerTicket
+Output: pricePerVouch
+Output: pricePerTicketAndVouch
+Output: totalAmountOwed  
