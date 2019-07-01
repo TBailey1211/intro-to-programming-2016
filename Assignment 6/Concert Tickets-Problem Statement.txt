@@ -1,0 +1,47 @@
+Problem Statement: 
+
+Assumptions:
+One customer at a time.
+Customers can only purchase seats in one type of section.
+orchestra Rate = 50
+floor Rate = 40
+lower Level Rate = 30
+upper Level Rate = 10
+
+
+Input:
+ticketType (orchestra, floor, lower level, upper level)
+ticketAmount
+
+
+Calculations:
+if ticket Type = "orchestra"
+   orchestra Accum = orchestra Accum + ticket Amount
+else if ticket Type = "floor"
+   floor Accum = floor Accum + ticket Amount
+else if ticket Type = "lower level"
+   lower Level Accum = lower Level Accum + ticket Amount
+else if ticket Type = "upper level"
+   upper Level Accum = upper Level Accum + ticket Amount
+
+money Orchestra = orchestra Accum * orchestra Rate
+money Floor = floor Accum * floor Rate
+money Lower Level = lower Level Accum * lower Level Rate
+money Upper Level = upper Level Accum * upper Level Rate
+total Money = money Orchestra + money Floor + money Lower Level + money Upper Level
+
+
+Output: 
+"Ask for $ orchestra rate"
+"Ask for $ floor rate"
+"Ask for $ lower level rate"
+"Ask for $ upper level rate" 
+orchestra Accum
+floor Accum
+lower Level Accum
+upper Level Accum
+money Orchestra
+money Floor
+money Lower Level
+money Upper Level
+total Money 

@@ -1,0 +1,79 @@
+<script type="text/javascript">
+<!--
+var ticketType, ticketAmount, anotherCustomer, totalMoney;
+var moneyOrchestra = 0;
+var moneyFloor = 0;
+var moneyLowerLevel = 0;
+var moneyUpperLevel = 0;
+var orchestraRate = 50;
+var floorRate = 40;
+var lowerLevelRate = 30;
+var upperLevelRate = 10;
+var orchestraAccum = 0;
+var floorAccum = 0;
+var lowerLevelAccum = 0;
+var upperLevelAccum = 0;
+var errorFlag = 0;
+var anotherCustomer = "yes";
+//loop
+while(anotherCustomer == "yes")
+{ //start loop
+
+ticketType = prompt("What type of ticket?","orchestra, floor, lower level, upper level");
+ticketAmount = prompt("How many tickets?","");
+ticketAmount = parseInt(ticketAmount);
+switch(ticketType)
+{ //start switch
+   case "orchestra":
+	    orchestraAccum = orchestraAccum + ticketAmount;
+			orchestraAccumRate = ticketAmount * orchestraRate;
+			alert("Ask for $" + orchestraAccumRate);
+   break;
+	 case "floor":
+	    floorAccum = floorAccum + ticketAmount;
+			floorAccumRate = ticketAmount * floorRate;
+			alert("Ask for $" + floorAccumRate);
+   break;
+	 case "lower level":
+	    lowerLevelAccum = lowerLevelAccum + ticketAmount;
+			lowerLevelAccumRate = ticketAmount * lowerLevelRate;
+			alert("Ask for $" + lowerLevelAccumRate);
+	 break;
+	 case "upper level":
+	    upperLevelAccum = upperLevelAccum + ticketAmount;
+			upperLevelAccumRate = ticketAmount * upperLevelRate;
+			alert("Ask for $" + upperLevelAccumRate);
+	 break;
+	 default:
+	    alert("You typed " + ticketType + " you needed to type orchestra, floor, lower level, or upper level");
+			errorFlag = 1;
+	 break;
+   } //stop switch
+	 if (errorFlag == 0)
+	 {
+   anotherCustomer = prompt("Is there another customer?","yes");
+	 }
+	 else
+	 {
+	    anotherCustomer = "yes";
+			errorFlag = 0;
+	 }
+} //stop loop
+
+moneyOrchestra = orchestraAccum * orchestraRate;
+moneyFloor = floorAccum * floorRate;
+moneyLowerLevel = lowerLevelAccum * lowerLevelRate;
+moneyUpperLevel = upperLevelAccum * upperLevelRate;
+totalMoney = moneyOrchestra + moneyFloor + moneyLowerLevel + moneyUpperLevel;
+//Output
+document.write("The total number of Orchestra tickets purchased: " + orchestraAccum);
+document.write("<br>The total number of Floor tickets purchased: " + floorAccum);
+document.write("<br>The total number of Lower Level tickets purchased: " + lowerLevelAccum);
+document.write("<br>The total number of Upper Level tickets purchased: " + upperLevelAccum);
+document.write("<br>The total dollar amount for Orchestra tickets: $" + moneyOrchestra);
+document.write("<br>The total dollar amount for Floor tickets: $" + moneyFloor);
+document.write("<br>The total dollar amount for Lower Level tickets: $" + moneyLowerLevel);
+document.write("<br>The total dollar amount for Upper Level tickets: $" + moneyUpperLevel);
+document.write("<br>The total amount of money collected: $" + totalMoney);
+// -->
+</script>

@@ -1,0 +1,43 @@
+Human Algorithm: 
+
+orchestraRate = 50
+floorRate = 40
+lowerLevelRate = 30
+upperLevelRate = 10
+anotherCustomer = "yes"
+
+
+Input: ticketType (orchestra, floor, lower level, upper level)
+Input: ticketAmount
+
+
+if ticketType = "orchestra"
+   orchestraAccum = orchestraAccum + ticketAmount
+   output: "Ask for $ orchestra rate"
+else if ticketType = "floor"
+   floorAccum = floorAccum + ticketAmount
+   output: "Ask for $ floor rate"
+else if ticketType = "lower level"
+   lowerLevelAccum = lowerLevelAccum + ticketAmount
+   output: "Ask for $ lower level rate"
+else if ticketType = "upper level"
+   upperLevelAccum = upperLevelAccum + ticketAmount
+   output: "Ask for $ upper level rate"
+
+
+moneyOrchestra = orchestraAccum * orchestraRate
+moneyFloor = floorAccum * floorRate
+moneyLowerLevel = lowerLevelAccum * lowerLevelRate
+moneyUpperLevel = upperLevelAccum * upperLevelRate
+totalMoney = moneyOrchestra + moneyFloor + moneyLowerLevel + moneyUpperLevel
+
+
+Output: orchestraAccum
+Output: floorAccum
+Output: lowerLevelAccum
+Output: upperLevelAccum
+Output: moneyOrchestra
+Output: moneyFloor
+Output: moneyLowerLevel
+Output: moneyUpperLevel
+Output: totalMoney 
